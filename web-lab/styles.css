@@ -1,8 +1,11 @@
+/* General page styles */
 body {
     font-family: system-ui, sans-serif;
     margin: 0;
     padding: 0;
     background: #f6f8fa;
+    color: #1f2937;
+    transition: background-color 0.3s, color 0.3s;
   }
   
   /* Header banner */
@@ -17,6 +20,7 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 24px;
   }
   
   .logo {
@@ -26,6 +30,7 @@ body {
     text-decoration: none;
   }
   
+  /* Navigation links */
   .nav-links {
     display: flex;
     gap: 24px;
@@ -44,11 +49,58 @@ body {
     color: #60a5fa;
   }
   
+  /* Dark mode toggle button */
+  #theme-toggle {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: #ffffff;
+    font: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  #theme-toggle:hover {
+    background: #1d4ed8;
+  }
+  
   /* Main content */
   main {
     padding: 2rem;
   }
   
-  h1 {
-    margin-top: 0;
+  /* Dark theme */
+  body[data-theme="dark"] {
+    background: #111827;
+    color: #f9fafb;
+  }
+  
+  body[data-theme="dark"] .header-banner {
+    background-color: #030712;
+  }
+  
+  body[data-theme="dark"] main {
+    background-color: #111827;
+    color: #f9fafb;
+  }
+  
+  /* Responsive layout for smaller screens */
+  @media (max-width: 600px) {
+    .header-banner {
+      padding: 16px;
+    }
+  
+    .navbar {
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+  
+    .nav-links {
+      gap: 12px;
+    }
+  
+    #theme-toggle {
+      padding: 8px 12px;
+    }
   }
