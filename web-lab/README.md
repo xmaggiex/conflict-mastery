@@ -22,3 +22,5 @@ the HTML body element.
 - CSS
 - JavaScript
 - Git
+
+#adding contrast fix
