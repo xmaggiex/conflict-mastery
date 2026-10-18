@@ -1,3 +1,0 @@
-Line 1: Stable text
-Line 2: Added by feature B
-Line 3: Legacy branch stuff
